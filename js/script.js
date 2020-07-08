@@ -10,6 +10,23 @@
         },
     ];
 
+    const addNewTask = () => {
+        const newTaskContent = document.querySelector(".js-newTaskContent").value.trim();
+        tasks = [
+            ...tasks,
+            { content: newTaskContent },
+        ];
+        render();
+    };
+
+    const bindAddNewTaskEvent = () => {
+        const newTaskButton = document.querySelector(".js-addNewTaskButton");
+        newTaskButton.addEventListener("click", (event) => {
+            event.preventDefault();
+            addNewTask();
+        });
+    };
+
     const render = () => {
         let htmlString = "";
         for (const task of tasks) {
@@ -23,6 +40,7 @@
         };
 
         document.querySelector(".js-taskList").innerHTML = htmlString;
+        bindAddNewTaskEvent();
     };
 
     const init = () => {
