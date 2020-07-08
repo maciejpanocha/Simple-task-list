@@ -22,6 +22,10 @@
    color: hsl(180, 100%, 30%);;
 }
 
+.section__button:active {
+    outline: none;
+}
+
 .section__button--hidden {
     display: none;
 }
