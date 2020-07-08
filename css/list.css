@@ -9,17 +9,22 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 20px;
-    line-height: 2;
-    padding: 10px;
+    line-height: 2.5;
+    padding: 5px;
 }
 
 .list__item--done {
     text-decoration: line-through;
 }
 
+.list__item--hidden {
+    display: none;
+}
+
 .list__button {
     border: none;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
     color: white
 }
 
