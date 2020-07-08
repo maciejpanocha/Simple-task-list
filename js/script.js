@@ -10,6 +10,11 @@
         },
     ];
 
+    const cleanForm = () => {
+        document.querySelector(".js-newTaskContent").focus();
+        document.querySelector(".js-form").reset();
+    };
+
     const addNewTask = () => {
         const newTaskContent = document.querySelector(".js-newTaskContent").value.trim();
         tasks = [
@@ -24,6 +29,7 @@
         newTaskButton.addEventListener("click", (event) => {
             event.preventDefault();
             addNewTask();
+            cleanForm();
         });
     };
 
