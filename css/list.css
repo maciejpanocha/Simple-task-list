@@ -1,12 +1,42 @@
 .list {
     line-height: 1.5;
     padding: 0;
+    font-size: 17px;
 }
 
 .list__item {
     list-style: none;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+    line-height: 2;
+    padding: 10px;
 }
 
 .list__item--done {
     text-decoration: line-through;
+}
+
+.list__button {
+    border: none;
+    padding: 10px;
+    color: white
+}
+
+.list__button--toggleDone {
+    background-color: hsl(120, 100%, 25%);
+}
+
+.list__button--toggleDone:hover {
+    background-color: hsl(120, 100%, 30%);
+    transition: 0.3s;
+}
+
+.list__button--remove {
+    background-color: hsl(348, 83%, 47%);
+}
+
+.list__button--remove:hover {
+    background-color: hsl(348, 83%, 52%);
+    transition: 0.3s;
 }
